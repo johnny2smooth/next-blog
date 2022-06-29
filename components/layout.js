@@ -5,16 +5,16 @@ import Image from 'next/image';
 import Footer from './footer';
 
 const name = 'Johnny P';
-export const siteTitle = 'Next.js Sample Website';
+export const siteTitle = 'Johnny P Home';
 
 export default function Layout({ children, home }) {
   return (
-    <div>
+    <div className="p-4">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
+          name="A blog for Johnny P"
+          content="Learning how to build a personal website using Next.js"
         />
         <meta
           property="og:image"
@@ -25,19 +25,42 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header>
+      <header className="mb-4">
         {home ? (
-          <>
-            <Image
-              priority
-              src="/images/profile.jpeg"
-              className="rounded-full"
-              height={144}
-              width={144}
-              alt={name}
-            />
-            <h1>{name}</h1>
-          </>
+          <div className="flex justify-between items-center w-full">
+            <div className="flex items-center">
+              <Image
+                priority
+                src="/images/profile.jpeg"
+                className="rounded-full"
+                height={144}
+                width={144}
+                alt={name}
+              />
+              <h1 className="text-7xl font-black pl-4">{name}</h1>
+            </div>
+            <nav>
+              <ul>
+                <li>
+                  <Link href="/">
+                    <a className="text-black font-bold pr-4">
+                      something to somewhere
+                    </a>
+                  </Link>
+                  <Link href="/">
+                    <a className="text-black font-bold pr-4">
+                      something to somewhere
+                    </a>
+                  </Link>
+                  <Link href="/">
+                    <a className="text-black font-bold pr-4">
+                      something to somewhere
+                    </a>
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
         ) : (
           <>
             <Link href="/">
@@ -60,7 +83,7 @@ export default function Layout({ children, home }) {
           </>
         )}
       </header>
-      <main>{children}</main>
+      <main className="">{children}</main>
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
