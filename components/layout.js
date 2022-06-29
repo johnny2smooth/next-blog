@@ -43,17 +43,17 @@ export default function Layout({ children, home }) {
               <ul>
                 <li>
                   <Link href="/">
-                    <a className="text-black font-bold pr-4">
+                    <a className="text-black font-bold pr-4 underline hover:text-blue-600">
                       something to somewhere
                     </a>
                   </Link>
                   <Link href="/">
-                    <a className="text-black font-bold pr-4">
+                    <a className="text-black font-bold pr-4 underline hover:text-blue-600">
                       something to somewhere
                     </a>
                   </Link>
                   <Link href="/">
-                    <a className="text-black font-bold pr-4">
+                    <a className="text-black font-bold pr-4 underline hover:text-blue-600">
                       something to somewhere
                     </a>
                   </Link>
