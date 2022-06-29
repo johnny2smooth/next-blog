@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styles from './layout.module.css';
 import Link from 'next/link';
-import Header from './header';
+import Image from 'next/image';
 import Footer from './footer';
 
 const name = 'Johnny P';
@@ -25,7 +25,41 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <Header home />
+      <header>
+        {home ? (
+          <>
+            <Image
+              priority
+              src="/images/profile.jpeg"
+              className="rounded-full"
+              height={144}
+              width={144}
+              alt={name}
+            />
+            <h1>{name}</h1>
+          </>
+        ) : (
+          <>
+            <Link href="/">
+              <a>
+                <Image
+                  priority
+                  src="/images/profile.jpeg"
+                  className="rounded-full"
+                  height={108}
+                  width={108}
+                  alt={name}
+                />
+              </a>
+            </Link>
+            <h2>
+              <Link href="/">
+                <a>{name}</a>
+              </Link>
+            </h2>
+          </>
+        )}
+      </header>
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>

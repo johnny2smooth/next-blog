@@ -1,5 +1,5 @@
 ---
-title: 'My First Blog Post'
+title: 'My Own Blog Post'
 date: '2022-06-28'
 ---
 
