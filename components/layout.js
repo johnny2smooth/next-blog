@@ -27,17 +27,17 @@ export default function Layout({ children, home }) {
       </Head>
       <header className="mb-4">
         {home ? (
-          <div className="flex justify-between items-center w-full">
+          <div className="flex justify-between items-baseline w-full">
             <div className="flex items-center">
+              <h1 className="text-7xl font-black pr-4 ">{name}</h1>
               <Image
                 priority
                 src="/images/profile.jpeg"
-                className="rounded-full"
-                height={144}
-                width={144}
+                className="rounded-full pl-4"
+                height={108}
+                width={108}
                 alt={name}
               />
-              <h1 className="text-7xl font-black pl-4">{name}</h1>
             </div>
             <nav>
               <ul>
