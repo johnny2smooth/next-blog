@@ -29,15 +29,15 @@ export default function Layout({ children, home }) {
         {home ? (
           <div className="flex justify-between items-baseline w-full">
             <div className="flex items-center">
-              <h1 className="text-7xl font-black pr-4 ">{name}</h1>
               <Image
                 priority
-                src="/images/profile.jpeg"
+                src="/images/memoji-peace.jpg"
                 className="rounded-full pl-4"
-                height={108}
-                width={108}
+                height={144}
+                width={144}
                 alt={name}
               />
+              <h1 className="text-7xl font-black pr-4 ">{name}</h1>
             </div>
             <nav>
               <ul>
@@ -63,23 +63,23 @@ export default function Layout({ children, home }) {
           </div>
         ) : (
           <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/profile.jpeg"
-                  className="rounded-full"
-                  height={108}
-                  width={108}
-                  alt={name}
-                />
-              </a>
-            </Link>
             <h2>
               <Link href="/">
                 <a>{name}</a>
               </Link>
             </h2>
+            <Link href="/">
+              <a>
+                <Image
+                  priority
+                  src="/images/memoji-peace.jpg"
+                  className="rounded-full"
+                  height={144}
+                  width={144}
+                  alt={name}
+                />
+              </a>
+            </Link>
           </>
         )}
       </header>
