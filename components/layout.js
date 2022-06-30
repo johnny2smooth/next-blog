@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Footer from './footer';
 
-const name = 'Johnny P';
+const name = 'Johnny';
 export const siteTitle = 'Johnny P Home';
 
 export default function Layout({ children, home }) {
@@ -27,8 +27,8 @@ export default function Layout({ children, home }) {
       </Head>
       <header className="mb-4">
         {home ? (
-          <div className="flex justify-between items-baseline w-full">
-            <div className="flex items-center">
+          <div className="flex justify-between flex-wrap items-baseline w-full">
+            <div className="flex justify-between items-center">
               <Image
                 priority
                 src="/images/memoji-peace.jpg"
@@ -37,24 +37,24 @@ export default function Layout({ children, home }) {
                 width={144}
                 alt={name}
               />
-              <h1 className="text-7xl font-black pr-4 ">{name}</h1>
+              <h1 className="text-4xl md:text-7xl font-black pr-4">{name}</h1>
             </div>
             <nav>
-              <ul>
+              <ul className="flex flex-wrap md:text-3xl">
                 <li>
                   <Link href="/">
-                    <a className="text-black font-bold pr-4 underline hover:text-blue-600">
-                      something to somewhere
+                    <a className="text-black font-bold pr-4 underline hover:text-blue-600 grow">
+                      About me
                     </a>
                   </Link>
                   <Link href="/">
-                    <a className="text-black font-bold pr-4 underline hover:text-blue-600">
-                      something to somewhere
+                    <a className="text-black font-bold pr-4 underline hover:text-blue-600 grow">
+                      Portfolio
                     </a>
                   </Link>
                   <Link href="/">
-                    <a className="text-black font-bold pr-4 underline hover:text-blue-600">
-                      something to somewhere
+                    <a className="text-black font-bold pr-4 underline hover:text-blue-600 grow">
+                      Blog + Videos
                     </a>
                   </Link>
                 </li>
