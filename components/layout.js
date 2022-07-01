@@ -1,20 +1,20 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import styles from './layout.module.css';
-import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import Image from 'next/image';
+import Footer from './footer';
 
-const name = 'Johnny P';
-export const siteTitle = 'Next.js Sample Website';
+const name = 'Johnny';
+export const siteTitle = 'Johnny P Home';
 
 export default function Layout({ children, home }) {
   return (
-    <div className={styles.container}>
+    <div className="p-4">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
+          name="A blog for Johnny P"
+          content="Learning how to build a personal website using Next.js"
         />
         <meta
           property="og:image"
@@ -25,42 +25,65 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
+      <header className="mb-4">
         {home ? (
-          <>
-            <Image
-              priority
-              src="/images/profile.jpeg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
+          <div className="flex justify-between flex-wrap items-baseline w-full">
+            <div className="flex justify-between items-center">
+              <Image
+                priority
+                src="/images/memoji-peace.jpg"
+                className="rounded-full pl-4"
+                height={144}
+                width={144}
+                alt={name}
+              />
+              <h1 className="text-4xl md:text-7xl font-black pr-4">{name}</h1>
+            </div>
+            <nav>
+              <ul className="flex flex-wrap md:text-3xl">
+                <li>
+                  <Link href="/">
+                    <a className="text-black font-bold pr-4 underline hover:text-blue-600 grow">
+                      About me
+                    </a>
+                  </Link>
+                  <Link href="/">
+                    <a className="text-black font-bold pr-4 underline hover:text-blue-600 grow">
+                      Portfolio
+                    </a>
+                  </Link>
+                  <Link href="/">
+                    <a className="text-black font-bold pr-4 underline hover:text-blue-600 grow">
+                      Blog + Videos
+                    </a>
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
         ) : (
           <>
+            <h2>
+              <Link href="/">
+                <a>{name}</a>
+              </Link>
+            </h2>
             <Link href="/">
               <a>
                 <Image
                   priority
-                  src="/images/profile.jpeg"
-                  className={utilStyles.borderCircle}
-                  height={108}
-                  width={108}
+                  src="/images/memoji-peace.jpg"
+                  className="rounded-full"
+                  height={144}
+                  width={144}
                   alt={name}
                 />
               </a>
             </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={`${utilStyles.colorInherit}`}>{name}</a>
-              </Link>
-            </h2>
           </>
         )}
       </header>
-      <main>{children}</main>
+      <main className="">{children}</main>
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
@@ -68,6 +91,7 @@ export default function Layout({ children, home }) {
           </Link>
         </div>
       )}
+      <Footer />
     </div>
   );
 }
