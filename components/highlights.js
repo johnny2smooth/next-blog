@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-export default function Introduction() {
+export default function Highlights() {
   return (
     <>
       <div className="flex items-baseline gap-1">

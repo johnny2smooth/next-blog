@@ -29,7 +29,10 @@ export default function Post({ postData }) {
         <title>{postData.title}</title>
       </Head>
       <article className="prose prose-slate prose-lg max-w-prose mx-auto">
-        <h1 className="text-7xl">{postData.title}</h1>
+        <h3 className="text-6xl bg-slate-800 text-slate-100 p-4 rounded-sm">
+          {postData.title}
+        </h3>
+        <h4>{postData.snippet}</h4>
         <div>
           <Date dateString={postData.date} />
         </div>

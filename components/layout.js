@@ -26,66 +26,56 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className="mb-4">
-        {home ? (
-          <div className="flex justify-between flex-wrap items-baseline w-full">
-            <div className="flex justify-between items-center">
-              <Image
-                priority
-                src="/images/memoji-peace.jpg"
-                className="rounded-full pl-4"
-                height={144}
-                width={144}
-                alt={name}
-              />
-              <h1 className="text-4xl md:text-7xl font-black pr-4">{name}</h1>
-            </div>
-            <nav>
-              <ul className="flex flex-wrap md:text-3xl">
-                <li>
-                  <Link href="/">
-                    <a className="text-black font-bold pr-4 underline hover:text-blue-600 grow">
-                      About me
-                    </a>
-                  </Link>
-                  <Link href="/">
-                    <a className="text-black font-bold pr-4 underline hover:text-blue-600 grow">
-                      Portfolio
-                    </a>
-                  </Link>
-                  <Link href="/">
-                    <a className="text-black font-bold pr-4 underline hover:text-blue-600 grow">
-                      Blog + Videos
-                    </a>
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        ) : (
-          <>
-            <h2>
-              <Link href="/">
-                <a>{name}</a>
-              </Link>
-            </h2>
+        <div className="flex justify-between flex-wrap items-center w-full">
+          <div className="flex justify-between items-center">
             <Link href="/">
               <a>
                 <Image
                   priority
                   src="/images/memoji-peace.jpg"
-                  className="rounded-full"
+                  className="rounded-full pl-4"
                   height={144}
                   width={144}
                   alt={name}
                 />
               </a>
             </Link>
-          </>
-        )}
+            {home && (
+              <Link href="/">
+                <a className="text-black">
+                  <h1 className="text-4xl md:text-7xl font-black pr-4">
+                    {name}
+                  </h1>
+                </a>
+              </Link>
+            )}
+          </div>
+          <nav>
+            <ul className="flex flex-wrap md:text-3xl">
+              <li>
+                <Link href="/">
+                  <a className="text-black font-bold pr-4 underline hover:text-blue-600 grow">
+                    About me
+                  </a>
+                </Link>
+                <Link href="/">
+                  <a className="text-black font-bold pr-4 underline hover:text-blue-600 grow">
+                    Portfolio
+                  </a>
+                </Link>
+                <Link href="/posts">
+                  <a className="text-black font-bold pr-4 underline hover:text-blue-600 grow">
+                    Blog + Videos
+                  </a>
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </header>
       <main className="">{children}</main>
       {!home && (
-        <div className={styles.backToHome}>
+        <div className="text-3xl">
           <Link href="/">
             <a>← Back to home</a>
           </Link>
