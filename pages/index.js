@@ -5,6 +5,7 @@ import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
 import Highlights from '../components/highlights';
+import Introduction from '../components/introduction';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -21,6 +22,9 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
+      <section>
+        <Introduction />
+      </section>
       <section>
         <Highlights />
       </section>
