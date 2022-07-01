@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Footer from './footer';
 
-const name = 'Johnny';
+const name = '2';
 export const siteTitle = 'Johnny P Home';
 
 export default function Layout({ children, home }) {
@@ -36,19 +36,19 @@ export default function Layout({ children, home }) {
                   className="rounded-full pl-4"
                   height={144}
                   width={144}
-                  alt={name}
+                  alt="Johnny's memoji"
                 />
               </a>
             </Link>
-            {home && (
+            {/* {home && (
               <Link href="/">
-                <a className="text-black">
-                  <h1 className="text-4xl md:text-7xl font-black pr-4">
+                <a className="text-black grow-1">
+                  <h1 className="text-8xl md:text-7xl font-black px-6">
                     {name}
                   </h1>
                 </a>
               </Link>
-            )}
+            )} */}
           </div>
           <nav>
             <ul className="flex flex-wrap md:text-3xl">
