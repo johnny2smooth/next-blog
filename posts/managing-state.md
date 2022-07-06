@@ -337,7 +337,7 @@ Here’s a few alternatives you should consider before using context:
 
 If neither of these approaches works well for you, consider context.
 
-### **Use cases for context**
+### \***\*Use cases for context\*\***
 
 - Theming
 - current account
@@ -348,7 +348,7 @@ Although, remember that when state within context changes, the whole subtree tha
 
 There will be many areas where we feel as if we are prop drilling into components too deeply. When that happens, just remember that there are other options besides wrapping the entire subtree in a context. Is the data in that subtree moving fast? If so, avoid context for performance reasons.
 
-## Scaling Up with Reducer and Context
+## \***\*Scaling Up with Reducer and Context\*\***
 
 Here is how you can combine a reducer with context:
 
