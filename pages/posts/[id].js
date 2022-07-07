@@ -30,9 +30,11 @@ export default function Post({ postData }) {
         Cross-Origin-Resource-Policy: same-site
       </Head>
       <article className="prose prose-slate prose-lg max-w-prose mx-auto">
-        <h3 className="text-6xl bg-slate-800 text-slate-100 p-4 rounded-sm">
-          {postData.title}
-        </h3>
+        <div className="box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 px-2 py-2">
+          <h3 className="text-6xl text-slate-100 m-4 px-4 py-2 rounded-sm leading-normal">
+            {postData.title}
+          </h3>
+        </div>
         <h4>{postData.snippet}</h4>
         <div>
           <Date dateString={postData.date} />
