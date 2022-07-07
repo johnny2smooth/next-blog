@@ -27,6 +27,7 @@ export default function Post({ postData }) {
     <Layout>
       <Head>
         <title>{postData.title}</title>
+        Cross-Origin-Resource-Policy: same-site
       </Head>
       <article className="prose prose-slate prose-lg max-w-prose mx-auto">
         <h3 className="text-6xl bg-slate-800 text-slate-100 p-4 rounded-sm">
@@ -37,6 +38,14 @@ export default function Post({ postData }) {
           <Date dateString={postData.date} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        {postData.stackblitz && (
+          <iframe
+            className="w-full h-96"
+            crossorigin
+            src={postData.stackblitz}
+          ></iframe>
+        )}
+        <h5>{postData.outro}</h5>
       </article>
     </Layout>
   );
