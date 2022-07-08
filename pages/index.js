@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
-import utilStyles from '../styles/utils.module.css';
+import layouts from '../styles/layouts.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
@@ -28,11 +28,11 @@ export default function Home({ allPostsData }) {
       <section>
         <Highlights />
       </section>
-      <section>
-        <h2 className="text-3xl">Blog</h2>
-        <ul>
+      <section className={`${layouts.stack}`}>
+        <h2 className={`text-3xl`}>Blog</h2>
+        <ul className={`${layouts.stack}`}>
           {allPostsData.map(({ id, date, title, snippet }) => (
-            <li key={id} className="my-4">
+            <li key={id} className="">
               <Link href={`/posts/${id}`}>
                 <a className="text-xl ">{title}</a>
               </Link>
