@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import Footer from './footer';
+import Curve from './curve';
 
 const name = '2';
 export const siteTitle = 'Johnny P Home';
@@ -39,15 +40,6 @@ export default function Layout({ children, home }) {
                 />
               </a>
             </Link>
-            {/* {home && (
-              <Link href="/">
-                <a className="text-black grow-1">
-                  <h1 className="text-8xl md:text-7xl font-black px-6">
-                    {name}
-                  </h1>
-                </a>
-              </Link>
-            )} */}
           </div>
           <nav>
             <ul className="flex flex-wrap">

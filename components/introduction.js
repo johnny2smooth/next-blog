@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import layouts from '../styles/layouts.module.css';
+import Curve from './curve';
 
 export default function Introduction() {
   return (
@@ -23,6 +24,7 @@ export default function Introduction() {
         to show off on here, playing tennis & basketball, and sharing laughs
         with my friends.
       </p>
+      <Curve />
     </div>
   );
 }
