@@ -52,9 +52,9 @@ to change how empty grid tracks are handled */
   display: grid;
   grid-template-columns: repeat(
     var(--grid-placement, auto-fill),
-    minmax(var(--grid-min-item-size, 16rem), 1fr)
+    minmax(var(--grid-min-item-size, 18rem), 1fr)
   );
-  gap: var(--gutter, var(--space-s-l));
+  gap: var(--gutter, 2em);
 }
 
 .grid[data-rows='masonry'] {
@@ -64,7 +64,7 @@ to change how empty grid tracks are handled */
 
 .grid[data-layout='50-50'] {
   --grid-placement: auto-fit;
-  --grid-min-item-size: clamp(16rem, 50vw, 26rem);
+  --grid-min-item-size: clamp(14rem, 50vw, 26rem);
 }
 
 /* 
@@ -114,4 +114,19 @@ A flipped version where the sidebar is on the right
 .switcher > :nth-last-child(n + 5),
 .switcher > :nth-last-child(n + 5) ~ * {
   flex-basis: 100%;
+}
+
+/**
+ * WRAPPER
+ * Sets a max width, adds a consistent gutter and horizontally
+ * centers the contents
+ * Info: https://piccalil.li/quick-tip/use-css-clamp-to-create-a-more-flexible-wrapper-utility/
+ */
+.wrapper {
+  max-width: var(--wrapper-max-width, 70rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--gutter, 1em);
+  padding-right: var(--gutter, 1em);
+  position: relative;
 }

@@ -30,9 +30,9 @@ export default function Layout({ children, home }) {
       <Header />
       <main className="">{children}</main>
       {!home && (
-        <div className="text-3xl">
+        <div className="text-3xl px-4">
           <Link href="/">
-            <a>← Back to home</a>
+            <a className="text-slate-900">← Back to home</a>
           </Link>
         </div>
       )}

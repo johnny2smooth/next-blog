@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import layouts from '../styles/layouts.module.css';
+import utility from '../styles/utility.module.css';
 import Card from './card';
 
 export default function Highlights() {
   return (
-    <div className={`${layouts.stack} py-8`}>
+    <div className={`${layouts.stack} ${utility.wrapper}`}>
       <div className="flex items-baseline gap-1">
         <p className="text-3xl">Highlights</p>
         <p className="text-xs">I am most proud of these</p>
@@ -13,7 +14,9 @@ export default function Highlights() {
       <motion.div
         animate={{ scale: [1, 0.75, 1, 1] }}
         transition={{ duration: 0.5 }}
-        className={layouts.switcher}
+        className={`${layouts.grid}`}
+        data-rows="masonry"
+        data-layout="50-50"
       >
         <Card to={'/'} children={'1'} />
         <Card to={'/'} children={'2'} />

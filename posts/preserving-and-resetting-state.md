@@ -12,10 +12,8 @@ The moment you stop rendering a component, it’s state disappears. When React r
 
 You can change props of a component without React tearing it down. According to React, it is the same component still.
 
-<aside>
 💡 Remember that **it’s the position in the UI tree—not in the JSX markup—that matters to React!**
 
-</aside>
 
 ### different components at the same location resets state
 
