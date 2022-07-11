@@ -5,7 +5,7 @@ import Card from './card';
 
 export default function Highlights() {
   return (
-    <div className={`${layouts.stack} my-8`}>
+    <div className={`${layouts.stack} py-8`}>
       <div className="flex items-baseline gap-1">
         <p className="text-3xl">Highlights</p>
         <p className="text-xs">I am most proud of these</p>

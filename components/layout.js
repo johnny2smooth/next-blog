@@ -8,7 +8,7 @@ export const siteTitle = 'Johnny P Home';
 
 export default function Layout({ children, home }) {
   return (
-    <div className="p-4">
+    <div>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -24,7 +24,7 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className="mb-4">
+      <header className="bg-green-600">
         <div className="flex justify-between flex-wrap items-center w-full">
           <div className="flex justify-between items-center">
             <Link href="/">
@@ -32,7 +32,7 @@ export default function Layout({ children, home }) {
                 <Image
                   priority
                   src="/images/memoji-peace.jpg"
-                  className="rounded-full pl-4"
+                  className="rounded-full pl-4 bg-green-600"
                   height={144}
                   width={144}
                   alt="Johnny's memoji"
@@ -50,7 +50,7 @@ export default function Layout({ children, home }) {
             )} */}
           </div>
           <nav>
-            <ul className="flex flex-wrap md:text-3xl">
+            <ul className="flex flex-wrap">
               <li>
                 <Link href="/">
                   <a className="text-black font-bold pr-4 underline hover:text-blue-600 grow">
