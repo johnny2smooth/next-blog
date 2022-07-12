@@ -28,12 +28,19 @@
   opacity: 95%;
 }
 
+.fontXS {
+  font-size: var(--xs-text);
+  line-height: var(--size-step-1);
+}
+
 .fontSmall {
   font-size: var(--small-text);
+  line-height: var(--size-step-1);
 }
 
 .fontMedium {
   font-size: var(--medium-text);
+  line-height: var(--size-step-3);
 }
 .fontLarge {
   font-size: var(--large-text);
@@ -50,7 +57,7 @@
  * Info: https://piccalil.li/quick-tip/use-css-clamp-to-create-a-more-flexible-wrapper-utility/
  */
 .wrapper {
-  max-width: var(--wrapper-max-width, 70rem);
+  max-width: var(--wrapper-max-width, 75rem);
   margin-left: auto;
   margin-right: auto;
   padding-left: var(--gutter, 1em);
@@ -64,8 +71,8 @@
  * Can either be configured by setting --region-space or use a default from the space scale
  */
 .region {
-  padding-top: var(--region-space, 1.2em);
-  padding-bottom: var(--region-space, 1.2em);
+  padding-top: var(--region-space, 1.1em);
+  padding-bottom: var(--region-space, 1.1em);
 }
 
 /* 

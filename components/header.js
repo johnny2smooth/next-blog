@@ -10,18 +10,21 @@ export default function Header() {
     <StackWrapper wrapFirst>
       <header className={`${utility.section}`}>
         <div className={`${layouts.switcher} items-center`}>
-          <Link href="/">
-            <a>
-              <Image
-                priority
-                src="/images/memoji-peace.jpg"
-                className="rounded-full"
-                height={144}
-                width={144}
-                alt="Johnny's memoji"
-              />
-            </a>
-          </Link>
+          <div className={`flex items-center ${utility.fontLarge} font-bold`}>
+            <Link href="/">
+              <a>
+                <Image
+                  priority
+                  src="/images/memoji-peace.jpg"
+                  className="rounded-full"
+                  height={144}
+                  width={144}
+                  alt="Johnny's memoji"
+                />
+              </a>
+            </Link>
+            <p>*Hello*</p>
+          </div>
           <nav>
             <ul>
               <li>

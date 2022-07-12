@@ -10,7 +10,7 @@ export default function StackWrapper({
     <>
       {wrapFirst ? (
         <div className={`${tailwind} ${utility.region}`}>
-          <div className={`${layouts.wrapper} ${utility.region}`}>
+          <div className={`${layouts.wrapper}`}>
             <div className={layouts.stack}>{children}</div>
           </div>
         </div>
