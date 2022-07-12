@@ -44,7 +44,7 @@
 }
 .fontLarge {
   font-size: var(--large-text);
-  line-height: var(--size-step-1);
+  line-height: var(--size-step-4);
 }
 
 .fontXL {

@@ -33,11 +33,6 @@ export default function Home({ allPostsData }) {
       <section className={utility.section}>
         <Highlights />
       </section>
-      <section className={utility.section}>
-        <Curve color="fill-green-600" />
-        <Blog allPostsData={allPostsData} />
-        <Curve color="fill-green-600" />
-      </section>
     </Layout>
   );
 }
