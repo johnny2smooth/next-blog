@@ -5,6 +5,7 @@ import Footer from './footer';
 import Curve from './curve';
 import Header from './header';
 import layouts from '../styles/layouts.module.css';
+import utility from '../styles/utility.module.css';
 
 const name = '2';
 export const siteTitle = 'Johnny P Home';

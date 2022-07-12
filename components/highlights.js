@@ -3,10 +3,11 @@ import { motion } from 'framer-motion';
 import layouts from '../styles/layouts.module.css';
 import utility from '../styles/utility.module.css';
 import Card from './card';
+import StackWrapper from './stackwrapper';
 
 export default function Highlights() {
   return (
-    <div className={`${layouts.stack} ${utility.wrapper}`}>
+    <StackWrapper wrapFirst>
       <div className="flex items-baseline gap-1">
         <p className="text-3xl">Highlights</p>
         <p className="text-xs">I am most proud of these</p>
@@ -23,6 +24,6 @@ export default function Highlights() {
         <Card to={'/'} children={'3'} />
         <Card to={'/'} children={'4'} />
       </motion.div>
-    </div>
+    </StackWrapper>
   );
 }

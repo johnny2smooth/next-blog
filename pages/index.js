@@ -26,6 +26,7 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utility.section}>
+        <Curve color="fill-green-600" />
         <Introduction />
         <Curve color="fill-green-600" />
       </section>
@@ -33,9 +34,9 @@ export default function Home({ allPostsData }) {
         <Highlights />
       </section>
       <section className={utility.section}>
-        <Curve color="fill-[#ee5141]" />
+        <Curve color="fill-green-600" />
         <Blog allPostsData={allPostsData} />
-        <Curve color="fill-[#ee5141]" />
+        <Curve color="fill-green-600" />
       </section>
     </Layout>
   );
