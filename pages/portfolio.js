@@ -6,7 +6,11 @@ export default function Portfolio() {
     <>
       <Layout>
         <StackWrapper wrapFirst>
-          <h1>Folio!</h1>
+          <h1>A good ol grid would be sicko mode.</h1>
+          <p>
+            You know what else would be sicko mode? gifs inside the cards.
+            on:hover snippets.
+          </p>
         </StackWrapper>
       </Layout>
     </>
