@@ -28,14 +28,14 @@ export default function Header() {
           <nav>
             <ul>
               <li>
-                <Link href="/">
+                <Link href="/about">
                   <a
                     className={`${utility.fontSmall} text-black font-bold pr-4 underline hover:text-blue-600`}
                   >
                     about me
                   </a>
                 </Link>
-                <Link href="/">
+                <Link href="/portfolio">
                   <a
                     className={`${utility.fontSmall} text-black font-bold pr-4 underline hover:text-blue-600`}
                   >
