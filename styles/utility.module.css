@@ -1,0 +1,85 @@
+.curve {
+  display: block;
+  height: 3.5em;
+  width: 100%;
+}
+
+.section > .curve {
+  transform: translateY(-2px);
+}
+
+.section > .curve:first-child {
+  transform: rotate(180deg) translateY(-1px);
+}
+
+.section__inner {
+  background: var(--spot-color, var(--color-dark));
+  color: var(--color-light);
+}
+
+.section blockquote {
+  font-weight: 700;
+  line-height: 1;
+  font-size: var(--size-step-4);
+  letter-spacing: var(--tracking-s);
+}
+
+.section :is(h1, h2, h3, blockquote) {
+  opacity: 95%;
+}
+
+.fontXS {
+  font-size: var(--xs-text);
+  line-height: var(--size-step-1);
+}
+
+.fontSmall {
+  font-size: var(--small-text);
+  line-height: var(--size-step-1);
+}
+
+.fontMedium {
+  font-size: var(--medium-text);
+  line-height: var(--size-step-3);
+}
+.fontLarge {
+  font-size: var(--large-text);
+}
+
+.fontXL {
+  font-size: var(--xl-text);
+}
+
+/**
+ * WRAPPER
+ * Sets a max width, adds a consistent gutter and horizontally
+ * centers the contents
+ * Info: https://piccalil.li/quick-tip/use-css-clamp-to-create-a-more-flexible-wrapper-utility/
+ */
+.wrapper {
+  max-width: var(--wrapper-max-width, 75rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--gutter, 1em);
+  padding-right: var(--gutter, 1em);
+  position: relative;
+}
+
+/**
+ * REGION 
+ * Add consistent vertical padding to create regions of content 
+ * Can either be configured by setting --region-space or use a default from the space scale
+ */
+.region {
+  padding-top: var(--region-space, 1.1em);
+  padding-bottom: var(--region-space, 1.1em);
+}
+
+/* 
+FLOW UTILITY
+Like the Every Layout stack: https://every-layout.dev/layouts/stack/
+Info about this implementation: https://piccalil.li/quick-tip/flow-utility/ 
+*/
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}

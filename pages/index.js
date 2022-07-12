@@ -1,10 +1,14 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
-import utilStyles from '../styles/utils.module.css';
+import layouts from '../styles/layouts.module.css';
+import utility from '../styles/utility.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
+import Highlights from '../components/highlights';
 import Introduction from '../components/introduction';
+import Curve from '../components/curve';
+import Blog from '../components/blog';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -21,24 +25,18 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section>
+      <section className={utility.section}>
+        <Curve color="fill-green-600" />
         <Introduction />
+        <Curve color="fill-green-600" />
       </section>
-      <section>
-        <h2>Blog</h2>
-        <ul>
-          {allPostsData.map(({ id, date, title }) => (
-            <li key={id}>
-              <Link href={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <small>
-                <Date dateString={date} />
-              </small>
-            </li>
-          ))}
-        </ul>
+      <section className={utility.section}>
+        <Highlights />
+      </section>
+      <section className={utility.section}>
+        <Curve color="fill-green-600" />
+        <Blog allPostsData={allPostsData} />
+        <Curve color="fill-green-600" />
       </section>
     </Layout>
   );

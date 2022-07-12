@@ -1,6 +1,7 @@
 ---
 title: 'My First Blog Post'
 date: '2022-06-29'
+snippet: 'A little intro'
 ---
 
 # Introduction
