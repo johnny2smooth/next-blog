@@ -27,21 +27,21 @@ export default function Header() {
               <li>
                 <Link href="/">
                   <a
-                    className={`${utility.smallFont} text-black font-bold pr-4 underline hover:text-blue-600`}
+                    className={`${utility.fontSmall} text-black font-bold pr-4 underline hover:text-blue-600`}
                   >
                     about me
                   </a>
                 </Link>
                 <Link href="/">
                   <a
-                    className={`${utility.smallFont} text-black font-bold pr-4 underline hover:text-blue-600`}
+                    className={`${utility.fontSmall} text-black font-bold pr-4 underline hover:text-blue-600`}
                   >
                     portfolio
                   </a>
                 </Link>
                 <Link href="/posts">
                   <a
-                    className={`${utility.smallFont} text-black font-bold pr-4 underline hover:text-blue-600`}
+                    className={`${utility.fontSmall} text-black font-bold pr-4 underline hover:text-blue-600`}
                   >
                     blog + videos
                   </a>

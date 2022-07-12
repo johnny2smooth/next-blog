@@ -28,8 +28,19 @@
   opacity: 95%;
 }
 
-.smallFont {
+.fontSmall {
   font-size: var(--small-text);
+}
+
+.fontMedium {
+  font-size: var(--medium-text);
+}
+.fontLarge {
+  font-size: var(--large-text);
+}
+
+.fontXL {
+  font-size: var(--xl-text);
 }
 
 /**

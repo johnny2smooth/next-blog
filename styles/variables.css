@@ -38,6 +38,7 @@
   --tracking: -0.05ch;
   --tracking-s: -0.075ch;
   --small-text: calc(0.8rem + 0.8vw);
-  --medium-text: calc(1rem + 1vw);
-  --large-text: calc(1.2rem + 1.2vw);
+  --medium-text: calc(1rem + 2vw);
+  --large-text: calc(2rem + 3vw);
+  --xl-text: calc(3rem + 4vw);
 }
