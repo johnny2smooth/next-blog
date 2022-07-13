@@ -31,24 +31,19 @@
   flex-basis: calc((30rem - 100%) * 999);
 }
 
-/* I am going to need to figure out how to switch the psuedo */
-/* from first-child to last-child depending on what the sidebar */
-/* component that I create is eventually passed */
-
-.with-sidebar {
+.withSidebar {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
-/* intrinsic sizing as is. */
-/* if we want more specific size, we add a flex-basis: desired */
-
-.with-sidebar > :first-child {
+.withSidebar[data-direction='left'] > :first-child,
+.withSidebar[data-direction='right'] > :last-child {
   flex-grow: 1;
 }
 
-.with-sidebar > :last-child {
+.withSidebar[data-direction='left'] > :last-child,
+.withSidebar[data-direction='right'] > :first-child {
   flex-basis: 0;
   flex-grow: 999;
   min-inline-size: 50%;
