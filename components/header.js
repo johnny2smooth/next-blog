@@ -53,10 +53,10 @@ export default function Header() {
             </button>
           </div>
           <nav>
-            <ul>
-              <li>
-                {links.map((link) => (
-                  <Link href={`${link}`} key={link}>
+            <ul className="flex flex-wrap space-around">
+              {links.map((link) => (
+                <li key={link}>
+                  <Link href={`${link}`}>
                     <a
                       className={`${utility.fontSmall} ${
                         router.route === link ? 'text-blue-600' : 'text-black'
@@ -65,8 +65,8 @@ export default function Header() {
                       {`${link.slice(1)}`}
                     </a>
                   </Link>
-                ))}
-              </li>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
