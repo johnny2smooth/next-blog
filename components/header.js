@@ -4,8 +4,11 @@ import utility from '../styles/utility.module.css';
 import Curve from './curve';
 import StackWrapper from './stackwrapper';
 import layouts from '../styles/layouts.module.css';
+import { useRouter } from 'next/router';
 
 export default function Header() {
+  const router = useRouter();
+
   return (
     <StackWrapper wrapFirst>
       <header className={`${utility.section}`}>
@@ -30,21 +33,29 @@ export default function Header() {
               <li>
                 <Link href="/about">
                   <a
-                    className={`${utility.fontSmall} text-black font-bold pr-4 underline hover:text-blue-600`}
+                    className={`${utility.fontSmall} ${
+                      router.route === '/about' ? 'text-blue-600' : 'text-black'
+                    } font-bold pr-4 underline hover:text-blue-600`}
                   >
                     about me
                   </a>
                 </Link>
                 <Link href="/portfolio">
                   <a
-                    className={`${utility.fontSmall} text-black font-bold pr-4 underline hover:text-blue-600`}
+                    className={`${utility.fontSmall} ${
+                      router.route === '/portfolio'
+                        ? 'text-blue-600'
+                        : 'text-black'
+                    } font-bold pr-4 underline hover:text-blue-600`}
                   >
                     portfolio
                   </a>
                 </Link>
                 <Link href="/posts">
                   <a
-                    className={`${utility.fontSmall} text-black font-bold pr-4 underline hover:text-blue-600`}
+                    className={`${utility.fontSmall} ${
+                      router.route === '/posts' ? 'text-blue-600' : 'text-black'
+                    } font-bold pr-4 underline hover:text-blue-600`}
                   >
                     blog + videos
                   </a>
