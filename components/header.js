@@ -5,9 +5,27 @@ import Curve from './curve';
 import StackWrapper from './stackwrapper';
 import layouts from '../styles/layouts.module.css';
 import { useRouter } from 'next/router';
+import { useState } from 'react';
 
 export default function Header() {
+  const [greeting, setGreeting] = useState('Hello');
   const router = useRouter();
+  const links = ['/about', '/portfolio', '/posts'];
+  const hello = [
+    '你好',
+    '今日は',
+    '안녕하세요',
+    'Bonjour',
+    'Hello',
+    'Hola',
+    'Hallo',
+    'Ciao',
+    'नमस्ते',
+    'γεια σας',
+    'Salve',
+    'ᐊᐃᓐᖓᐃ',
+    'Osiyo',
+  ];
 
   return (
     <StackWrapper wrapFirst>
@@ -26,40 +44,28 @@ export default function Header() {
                 />
               </a>
             </Link>
-            <p>*Hello*</p>
+            <button
+              onClick={() =>
+                setGreeting(hello[Math.floor(Math.random() * hello.length)])
+              }
+            >
+              {greeting}
+            </button>
           </div>
           <nav>
             <ul>
               <li>
-                <Link href="/about">
-                  <a
-                    className={`${utility.fontSmall} ${
-                      router.route === '/about' ? 'text-blue-600' : 'text-black'
-                    } font-bold pr-4 underline hover:text-blue-600`}
-                  >
-                    about me
-                  </a>
-                </Link>
-                <Link href="/portfolio">
-                  <a
-                    className={`${utility.fontSmall} ${
-                      router.route === '/portfolio'
-                        ? 'text-blue-600'
-                        : 'text-black'
-                    } font-bold pr-4 underline hover:text-blue-600`}
-                  >
-                    portfolio
-                  </a>
-                </Link>
-                <Link href="/posts">
-                  <a
-                    className={`${utility.fontSmall} ${
-                      router.route === '/posts' ? 'text-blue-600' : 'text-black'
-                    } font-bold pr-4 underline hover:text-blue-600`}
-                  >
-                    blog + videos
-                  </a>
-                </Link>
+                {links.map((link) => (
+                  <Link href={`${link}`} key={link}>
+                    <a
+                      className={`${utility.fontSmall} ${
+                        router.route === link ? 'text-blue-600' : 'text-black'
+                      } font-bold pr-4 underline hover:text-blue-600`}
+                    >
+                      {`${link.slice(1)}`}
+                    </a>
+                  </Link>
+                ))}
               </li>
             </ul>
           </nav>
