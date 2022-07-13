@@ -31,6 +31,29 @@
   flex-basis: calc((30rem - 100%) * 999);
 }
 
+/* I am going to need to figure out how to switch the psuedo */
+/* from first-child to last-child depending on what the sidebar */
+/* component that I create is eventually passed */
+
+.with-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* intrinsic sizing as is. */
+/* if we want more specific size, we add a flex-basis: desired */
+
+.with-sidebar > :first-child {
+  flex-grow: 1;
+}
+
+.with-sidebar > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: 50%;
+}
+
 /* AUTO GRID
 Related Every Layout: https://every-layout.dev/layouts/grid/
 More info on the flexible nature: https://piccalil.li/tutorial/create-a-responsive-grid-layout-with-no-media-queries-using-css-grid/
